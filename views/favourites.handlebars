@@ -1,8 +1,6 @@
-<!-- Loop over each object in the projects array -->
-{{#each pets as |pet| }}
 <div class="row mb-4 project">
     <div class="col-md-3">
-        {{!-- add image here --}}
+        <h1>My Favourite Pets</h1>
     </div>
   <div class="col-md-5">
     <h2>
@@ -10,13 +8,9 @@
     </h2>
     <p> {{pet.species}} </p>
     <p>Gender: {{pet.gender}} </p>
-    <p>Age: {{pet.age}} 'year(s) old' </p>
+    <p>Age: {{pet.age}} </p>
     <p>Breed: {{pet.breed}} </p>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{pet.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
+
+  {{!-- need to figure out how to loop through the "favourited" pets and display in a list --}}
+  
