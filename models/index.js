@@ -9,4 +9,5 @@ User.hasmany(Pet, {
 Pet.belongsTo(User, {
   foreignKey: "User_id",
 });
-module.exports = { project, User };
+
+module.exports = { pets, User };
