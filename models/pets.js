@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
     breed: DataTypes.STRING,
     Age: DataTypes.INTEGER,
     Sex: DataTypes.STRING,
-    Desciprion: DataTypes.Text,
+    Desciprion: DataTypes.STRING,
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: new Date(),
