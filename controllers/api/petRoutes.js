@@ -1,4 +1,4 @@
-const Pet = require('../../models/pets');
+const Pet = require('../../models/Pet');
 const cloudinary = require('cloudinary');
 const user = require('../../models/users');
 const router = require('express').Router();
@@ -27,6 +27,17 @@ router.post('/', withAuth, async (req, res) => {
       url: result.secure_url, // https url from cloudinary
       public_id: result.public_id,
     });
+  } catch (e) {
+    res.status(400).json(e);
+  }
+})
+
+router.get('/:id', async (req, res) => {
+  try {
+    const pet = await Pet.findByPk("req.params.id", {
+
+    })
+    res.status(200).json(pet);  
   } catch (e) {
     res.status(400).json(e);
   }
