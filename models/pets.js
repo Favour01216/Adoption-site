@@ -1,11 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
-  var pets = sequalize.define("pets", {
-    Name: DataTypes.STRING,
+  var pets = sequelize.define("pets", {
+    name: DataTypes.STRING,
     species: DataTypes.STRING,
     breed: DataTypes.STRING,
-    Age: DataTypes.INTEGER,
-    Sex: DataTypes.STRING,
-    Desciprion: DataTypes.STRING,
+    age: DataTypes.INTEGER,
+    sex: DataTypes.STRING,
+    description: DataTypes.Text,
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: new Date(),
