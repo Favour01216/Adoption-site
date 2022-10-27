@@ -10,4 +10,24 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_SECRET,
 })
 
-router.post('/')
+router.post('/', withAuth, async (req, res) => {
+  try {
+    const newPet = await Pet.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    })
+    res.status(200).json(newPet);
+  } catch (e) {
+    res.status(400).json(e);
+  }
+}, async (req,res) => {
+  try {
+    const result = await cloudinary.uploader.upload(req.files.image.path); // Should get a file path to image locally
+    res.status(200).json ({
+      url: result.secure_url, // https url from cloudinary
+      public_id: result.public_id,
+    });
+  } catch (e) {
+    res.status(400).json(e);
+  }
+})
