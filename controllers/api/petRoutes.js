@@ -37,7 +37,9 @@ router.get('/:id', async (req, res) => {
     const pet = await Pet.findByPk("req.params.id", {
 
     })
-    res.status(200).json(pet);  
+    res.render('pet', {
+      pets
+    });
   } catch (e) {
     res.status(400).json(e);
   }

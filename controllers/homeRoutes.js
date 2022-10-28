@@ -1,16 +1,15 @@
 const router = require('express').Router();
-const { Pet, User } = require('../models'); //check model name -> Pet or Pets ? 
+const { Pet, User } = require('../models'); 
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     const petData = await Pet.findAll();
 
-    const pets = Data.map((pet) => pet.get({ plain: true }));
-
+    const pets = petData.map((pet) => pet.get({ plain: true }));
+    console.log(pets);
     res.render('homepage', { 
-      pets, 
-      logged_in: req.session.logged_in 
+      pets
     });
   } catch (err) {
     res.status(500).json(err);
@@ -23,9 +22,8 @@ router.get('/pets/:id', async (req, res) => {
 
     const pet = petData.get({ plain: true });
 
-    res.render('pet', {
-      ...pet,
-      logged_in: req.session.logged_in
+    res.render('homepage', {
+      ...pet
     });
   } catch (err) {
     res.status(500).json(err);
