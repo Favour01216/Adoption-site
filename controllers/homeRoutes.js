@@ -5,11 +5,11 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const petData = await Pet.findAll();
-
     const pets = petData.map((pet) => pet.get({ plain: true }));
     console.log(pets);
     res.render('homepage', { 
-      pets
+      pets,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);

@@ -14,8 +14,11 @@ const newPetHandler = async (event) => {
   if (name && sex && species && breed && description && image) {
     const newPet = {name, sex, species, breed, description, image};
 
-    router.post('/api/pets', async (req,res) => {
-
-    })
+    const response = await fetch ('/api/pets', {
+      method: 'POST',
+      body: JSON.stringify(newPet),
+      headers: { 'Content-Type': 'application/json' }
+    });
+    console.log(response);
+    }
   }
-}
