@@ -1,6 +1,6 @@
 const Pet = require('../../models/Pet');
 const cloudinary = require('cloudinary');
-const user = require('../../models/users');
+const user = require('../../models/user');
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 
@@ -41,4 +41,6 @@ router.get('/:id', async (req, res) => {
   } catch (e) {
     res.status(400).json(e);
   }
-});
+})
+
+module.exports = router;
