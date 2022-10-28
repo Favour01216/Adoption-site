@@ -1,6 +1,6 @@
 const Pet = require('../../models/pets');
 const cloudinary = require('cloudinary');
-const user = require('../../models/users');
+const user = require('../../models/user');
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 
@@ -31,3 +31,5 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(e);
   }
 })
+
+module.exports = router;
