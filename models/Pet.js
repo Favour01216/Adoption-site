@@ -25,7 +25,7 @@ Pet.init(
       defaultValue: "Unknown",
     },
     age: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     sex: {
