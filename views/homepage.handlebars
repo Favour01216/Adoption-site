@@ -1,3 +1,4 @@
+<h1>All Available Pets</h1>
 {{#each pets as |pet| }}
 <div class="row mb-4 project">
     <div class="col-md-3">
@@ -7,7 +8,7 @@
     <h2>
       <a href="/project/{{pet.id}}">{{pet.name}}</a>
     </h2>
-    <p> {{pet.species}} </p>
+    <p>Species: {{pet.species}} </p>
     <p>Sex: {{pet.sex}} </p>
     <p>Age: {{pet.age}}</p>
     <p>Breed: {{pet.breed}} </p>
