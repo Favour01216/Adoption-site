@@ -1,11 +1,41 @@
-module.exports = function (sequelize, DataTypes) {
-  var pets = sequelize.define("pets", {
-    name: DataTypes.STRING,
-    species: DataTypes.STRING,
-    breed: DataTypes.STRING,
-    age: DataTypes.INTEGER,
-    sex: DataTypes.STRING,
-    description: DataTypes.Text,
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
+
+class Pet extends Model {}
+
+Pet.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull:false,
+      primaryKey: true,
+      autoIncrement:true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    species: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "Unknown",
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    sex: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: new Date(),
@@ -14,7 +44,13 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.DATE,
       defaultValue: new Date(),
     },
-  });
-
-  return pets;
-};
+  },
+    {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "Pet",
+    },
+);
+module.exports = Pet;
