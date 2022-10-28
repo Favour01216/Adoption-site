@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/pet/:id', async (req, res) => {
+router.get('/pets/:id', async (req, res) => {
   try {
     const petData = await Pet.findByPk(req.params.id);
 

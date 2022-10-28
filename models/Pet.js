@@ -44,13 +44,20 @@ Pet.init(
       type: DataTypes.DATE,
       defaultValue: new Date(),
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
   },
     {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Pet",
+    modelName: "pet",
     },
 );
 module.exports = Pet;
