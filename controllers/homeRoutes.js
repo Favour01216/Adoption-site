@@ -22,8 +22,19 @@ router.get('/pets/:id', async (req, res) => {
 
     const pet = petData.get({ plain: true });
 
-    res.render('homepage', {
-      ...pet
+    res.render('pet', {
+      ...pet,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/add', async (req, res) => {
+  try {
+    res.render('admin', { 
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
