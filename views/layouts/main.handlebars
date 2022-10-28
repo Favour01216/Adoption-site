@@ -18,8 +18,8 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/add" id ="add" class=".pr-3">Add New Pet</a>
+        <a href="/logout" id="logout">logout</a>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
