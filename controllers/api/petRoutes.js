@@ -30,7 +30,7 @@ router.post('/', withAuth, async (req, res) => {
   } catch (e) {
     res.status(400).json(e);
   }
-})
+});
 
 router.get('/:id', async (req, res) => {
   try {
@@ -41,4 +41,4 @@ router.get('/:id', async (req, res) => {
   } catch (e) {
     res.status(400).json(e);
   }
-})
+});

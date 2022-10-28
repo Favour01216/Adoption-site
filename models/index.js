@@ -10,4 +10,4 @@ Pet.belongsTo(User, {
   foreignKey: "User_id",
 });
 
-module.exports = { pets, User };
+module.exports = { Pet, User };

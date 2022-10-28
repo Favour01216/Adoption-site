@@ -1,6 +1,8 @@
+
 const newPetHandler = async (event) => {
   event.preventDefault();
-
+  const router = require('express').Router;
+  
   const name = document.querySelector('#name').value.trim();
   const sex = document.querySelector("#sex").value;
   const species = document.querySelector("#breed").value;
@@ -12,6 +14,8 @@ const newPetHandler = async (event) => {
   if (name && sex && species && breed && description && image) {
     const newPet = {name, sex, species, breed, description, image};
 
-    const post = await fetch ('/api/pets')
+    router.post('/api/pets', async (req,res) => {
+
+    })
   }
 }
