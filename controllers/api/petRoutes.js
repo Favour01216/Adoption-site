@@ -30,7 +30,7 @@ router.post('/', withAuth, async (req, res) => {
   } catch (e) {
     res.status(400).json(e);
   }
-})
+});
 
 router.get('/:id', async (req, res) => {
   try {
@@ -41,6 +41,16 @@ router.get('/:id', async (req, res) => {
   } catch (e) {
     res.status(400).json(e);
   }
+})
+
+router.get('/', async (req,res) => {
+  try {
+    const pets = await Pet.findAll({})
+    res.status(200).json(pets);
+  } catch (e) {
+    res.status(500).json(e);
+  }
+  
 })
 
 module.exports = router;
