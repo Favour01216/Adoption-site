@@ -1,4 +1,5 @@
   <div class="row">
+        {{#if admin}}
         <div class="col-md-6">
           <h2>Add A Pet!</h2>
       
@@ -31,12 +32,19 @@
             </div>
             <div class="form-group">
               <label for="new-pet">Image</label>
-              <textarea class="pet-form-input" type="text" id="image"></textarea>
+              <input type="file" id="image" name="image-browse">
             </div>
             <div class="form-group">
               <button class="btn btn-primary" type="submit">Submit</button>
             </div>
           </form>
+          {{else}}
+          <h1>Please log in as an administrator to add a new pet.</h1>
+          <br>
+          <br>
+          <br>
+          <a href="/login">Log in here!</a>
+          {{/if}}
         </div>
 
 <script src="./js/login.js"></script>
