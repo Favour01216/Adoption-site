@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
     const pets = petData.map((pet) => pet.get({ plain: true }));
     console.log(pets);
     console.log(req.session);
+    pets.map((pet) => pet.logged_in = req.session.logged_in);
     res.render('homepage', { 
       pets,
       logged_in: req.session.logged_in
@@ -43,16 +44,15 @@ router.get('/add', async (req, res) => {
   }
 });
 
-router.get('/logout', (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(204).end();
-      res.render('/login');
-    });
-  } else {
-    res.status(404).end();
-  }
-});
+// router.get('/logout', (req, res) => {
+//   if (req.session.logged_in) {
+//     req.session.destroy(() => {
+//       res.status(204).end();
+//     });
+//   } else {
+//     res.status(404).end();
+//   }
+// });
 
 
 // Use withAuth middleware to prevent access to route
