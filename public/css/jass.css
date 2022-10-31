@@ -425,8 +425,7 @@
   }
   
   a:hover {
-    color: #065b83;
-    text-decoration: underline;
+    background-color:#a9dcf3;
   }
   
   /* HEIGHT / WIDTH UTILS */
