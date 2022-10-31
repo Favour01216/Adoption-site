@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
     const petData = await Pet.findAll();
     const pets = petData.map((pet) => pet.get({ plain: true }));
     console.log(pets);
+    console.log(req.session);
     res.render('homepage', { 
       pets,
       logged_in: req.session.logged_in
@@ -34,7 +35,8 @@ router.get('/pets/:id', async (req, res) => {
 router.get('/add', async (req, res) => {
   try {
     res.render('admin', { 
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      admin: req.session.admin
     });
   } catch (err) {
     res.status(500).json(err);
