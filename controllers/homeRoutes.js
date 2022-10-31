@@ -6,8 +6,6 @@ router.get('/', async (req, res) => {
   try {
     const petData = await Pet.findAll();
     const pets = petData.map((pet) => pet.get({ plain: true }));
-    console.log(pets);
-    console.log(req.session);
     pets.map((pet) => pet.logged_in = req.session.logged_in);
     res.render('homepage', { 
       pets,
@@ -43,37 +41,6 @@ router.get('/add', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// router.get('/logout', (req, res) => {
-//   if (req.session.logged_in) {
-//     req.session.destroy(() => {
-//       res.status(204).end();
-//     });
-//   } else {
-//     res.status(404).end();
-//   }
-// });
-
-
-// Use withAuth middleware to prevent access to route
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
-
-//     const user = userData.get({ plain: true });
-
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 router.get('/login', (req, res) => {
     

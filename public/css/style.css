@@ -1,3 +1,20 @@
+#description-box {
+    border: 2px solid #1b89bc;
+    border-radius: 25px;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#logout,
+#add,
+#login-btn {
+    padding: 2px;
+    color: #1b89bc;
+    border: 1px solid #1b89bc;
+    border-radius:10px;
+    font-weight: bold;
+}
+
 body {
   background-repeat: no-repeat;
   background-image: url("/public/images/24petwatch-hero-web.png");

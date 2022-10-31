@@ -1,14 +1,15 @@
 <div class="text-center">
   {{#if logged_in}}
-    <h2>Name: {{{name}}}</h2>
+    <h2>{{{name}}}</h2>
+    <img>
     <p>Sex: {{{sex}}}</p>
     <p>Age: {{{age}}}</p>
     <p>Species: {{{species}}}</p>
     <p>Breed: {{{breed}}}</p>
-    <p>About {{{name}}}: {{{description}}}</p>
-    <p>
-    {{!-- img --}}
-    </p>
+    <section id="description-box">
+      <p>About {{{name}}}:</p>
+      <p>{{{description}}}</p>
+    </section>
     <p>
       <button class="btn btn-primary">Adopt This Pet!</button>
     </p>
