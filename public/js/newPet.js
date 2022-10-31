@@ -1,8 +1,7 @@
 
 const newPetHandler = async (event) => {
   event.preventDefault();
-  const router = require('express').Router;
-  
+
   const name = document.querySelector('#name').value.trim();
   const sex = document.querySelector("#sex").value;
   const species = document.querySelector("#breed").value;
@@ -22,3 +21,7 @@ const newPetHandler = async (event) => {
     console.log(response);
     }
   }
+
+  document
+    .querySelector('#submit-button')
+    .addEventListener('submit', newPetHandler);

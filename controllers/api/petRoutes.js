@@ -22,7 +22,9 @@ router.post('/', withAuth, async (req, res) => {
   }
 }, async (req,res) => {
   try {
+    console.log(req.files.image.path)
     const result = await cloudinary.uploader.upload(req.files.image.path); // Should get a file path to image locally
+    console.log(req)
     res.status(200).json ({
       url: result.secure_url, // https url from cloudinary
       public_id: result.public_id,
