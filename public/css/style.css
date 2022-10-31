@@ -1,0 +1,20 @@
+body {
+  background-repeat: no-repeat;
+  background-image: url("/public/images/24petwatch-hero-web.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#title {
+  color: red;
+  margin-bottom: 10px;
+}
+#login {
+  font-size: 30px;
+}
+header {
+  padding: 40px;
+  text-align: center;
+  background: var(--dark-blue);
+  color: var(--white);
+}
