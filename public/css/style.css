@@ -66,3 +66,20 @@ body::after {
   border: 1px solid black;
   border-radius: 10px;
 }
+
+#sex-dropdown {
+  position: relative;
+  display: inline-block;
+  width:80px;
+}
+
+#species-dropdown {
+  position: relative;
+  display: inline-block;
+  width:60px;
+}
+
+#description {
+  padding-top:100px;
+}
+
