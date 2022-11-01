@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      req.session.admin = admin;
+      req.session.admin = userData.admin;
 
       res.status(200).json(userData);
     });
