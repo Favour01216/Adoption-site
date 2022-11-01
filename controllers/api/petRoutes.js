@@ -1,6 +1,6 @@
 const Pet = require('../../models/Pet');
 const cloudinary = require('cloudinary').v2;
-const user = require('../../models/user');
+const user = require('../../models/User');
 const router = require('express').Router();
 const uploader = require('../../utils/helpers');
 
