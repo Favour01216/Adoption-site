@@ -20,13 +20,13 @@ There is no installation required in order to access the website. The website is
 The website features a homepage listing all of the currently available animals and lists the names and corresponding images for the pets. The pet details on the homepage and the links to each specific pet's page are only available once the user is logged into their account. The login page is accessed through the login button on the top right of the webpage, where it displays options to either log in or sign up for a new account. The user can log out by clicking on the logout button on the top right of the wepage once logged in. Once signed up or logged in, the homepage will refresh and the corresponding details for each pet will display including its sex, age, species, breed, and a brief description regarding their personality. The name of the pet can be clicked in order to open a page that again displays their information, and an "Adopt Me" button is present for when the user wants to adopt the pet. For admin accounts, there is an option to add a new pet. The page is accessed through the button to the left of the login/logout button, where admins can input information about the new pet. 
 
 Homepage: 
-![image]('./public/images/web.png')
+![image](./public/images/web.png)
 
 Pet's page:
-![image]('./public/images/pets-page.png)
+![image](./public/images/pets-page.png)
 
 Login page:
-![image]('.public/images/login.png)
+![image](.public/images/login.png)
 
 ## Credits 
 
