@@ -1,18 +1,18 @@
 #description-box {
-    border: 2px solid #1b89bc;
-    border-radius: 25px;
-    padding: 1%;
-    margin-bottom: 1%;
+  border: 2px solid #1b89bc;
+  border-radius: 25px;
+  padding: 1%;
+  margin-bottom: 1%;
 }
 
 #logout,
 #add,
 #login-btn {
-    padding: 2px;
-    color: #1b89bc;
-    border: 1px solid #1b89bc;
-    border-radius:10px;
-    font-weight: bold;
+  padding: 2px;
+  color: #1b89bc;
+  border: 1px solid #1b89bc;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 body {
@@ -20,16 +20,25 @@ body {
   background-image: url("../images/pets_background.png");
   background-attachment: fixed;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: contain;
 }
-#title {
-  color: red;
-  margin-bottom: 10px;
+body::after {
+  content: "";
+  background-image: url("../images/24petwatch-hero-web.png");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-header {
-  padding: 40px;
+#title {
+  color: rgb(4, 0, 255);
+  margin-bottom: 10px;
   text-align: center;
-  background: var(--dark-blue);
-  color: var(--white);
 }
