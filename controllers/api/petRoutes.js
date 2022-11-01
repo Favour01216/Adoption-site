@@ -11,42 +11,22 @@ cloudinary.config({
   secure:true,
 });
 
-console.log(cloudinary.config());
-
 router.post('/', async (req, res) => {
   try {
-    console.log(req.body);
     let petForm = req.body;
     const image = await uploader(req.body.image);
-    console.log("***********************************");
     petForm.image = image.secure_url,
     petForm.image_public_id = image.public_id
-    console.log(petForm);
-    console.log("***********************************");
 
     const newPet = await Pet.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-    console.log(newPet)
     res.status(200).json(newPet);
   } catch (e) {
     res.status(400).json(e);
   }
 });
-
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const pet = await Pet.findByPk("req.params.id", {
-//     })
-//     console.log(pet);
-//     res.render('pet', {
-//       pet
-//     });
-//   } catch (e) {
-//     res.status(400).json(e);
-//   }
-// })
 
 router.get('/', async (req,res) => {
   try {
