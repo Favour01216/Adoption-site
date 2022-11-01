@@ -44,6 +44,14 @@ Pet.init(
       type: DataTypes.DATE,
       defaultValue: new Date(),
     },
+    image: {
+      type: DataTypes.STRING,
+      defaultValue: null
+    },
+    public_id: {
+      type: DataTypes.STRING,
+      defaultValue: null
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
