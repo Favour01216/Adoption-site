@@ -21,7 +21,13 @@ router.get('/pets/:id', async (req, res) => {
     const petData = await Pet.findByPk(req.params.id);
 
     const pet = petData.get({ plain: true });
-
+    let isCat;
+    if (pet.species == "Cat") {
+      isCat = true;
+    } else {
+      isCat = false;
+    }
+    pet.isCat = isCat;
     res.render('pet', {
       ...pet,
       logged_in: req.session.logged_in

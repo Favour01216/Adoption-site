@@ -35,18 +35,18 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
-  try {
-    const pet = await Pet.findByPk("req.params.id", {
-
-    })
-    res.render('pet', {
-      pets
-    });
-  } catch (e) {
-    res.status(400).json(e);
-  }
-})
+// router.get('/:id', async (req, res) => {
+//   try {
+//     const pet = await Pet.findByPk("req.params.id", {
+//     })
+//     console.log(pet);
+//     res.render('pet', {
+//       pet
+//     });
+//   } catch (e) {
+//     res.status(400).json(e);
+//   }
+// })
 
 router.get('/', async (req,res) => {
   try {
