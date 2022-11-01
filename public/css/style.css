@@ -43,7 +43,6 @@ body {
 }
 body::after {
   content: "";
-  background-image: url("../images/24petwatch-hero-web.png");
   opacity: 0.5;
   top: 0;
   left: 0;
