@@ -1,23 +1,13 @@
 [
     {
-      "name": "Honey",
-      "sex":"Female",
-      "age": "1 year old",
-      "species": "Dog",
-      "breed": "Great Pyrenees",
-      "description": "Honey is a fun-loving, happy-all-the-time, glass-is-half-full kind of dog looking for someone who loves to laugh and play around. Must have a great sense of humor and some time to spend with me. She is a dog on a mission to please you."    ,
-      "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-      "public_id": "Beverly"
-    },
-    {
       "name": "Daisy",
       "sex":"Female",
       "age": "3 years old",
       "species": "Cat",
       "breed": "Shorthair/Mix",
       "description": "Daisy came to us as a very frightened stray. She is still quite nervous & is affectionate on her terms, asking for attention when she wants it. She really does NOT like to be picked up or restrained as she finds this quite scary. A quiet adult home would be the best placement for this pretty girl. Daisy would benefit if she could have a quiet room to herself if possible while she adjusts to her new surroundings. A place to hide within this quiet space would be ideal until she feels save to venture out to explore.",
-      "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-      "public_id": "Beverly"
+      "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667271757/Daisy.jpg",
+      "public_id": "Daisy"
     },
     {
       "name": "Toothless",
@@ -26,18 +16,8 @@
       "species":"Cat",
       "breed":"Shorthair/Mix",
       "description": "This sweet boy is a staff favourite without a doubt! He is quirky and has the personality of a grumpy old man, although he is all love when it comes down to it. He has the funniest raspy meow that he likes to use, just to let you know he's around and ready for some love. He is a special boy who is going to make his new family smile lots.",
-      "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-      "public_id": "Beverly"
-    },
-    {
-        "name": "Diesel",
-        "sex":"Male",
-        "age":"7 months old",
-        "species":"Dog",
-        "breed":"German Shepherd",
-        "description":"Diesel had orthopedic repair of a fractured forelimb. He will need to continue physiotherapy exercises with his new family as he heals. He is a green life of the party. He thinks everything is fun, interesting and meant for play, especially you. Anything you do, he'll want to do too. With his own brand of surprises, life with him will keep you constantly on your toes, and the fun is guaranteed. (Socially motivated)",
-        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-        "public_id": "Beverly"
+      "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667271834/Toothless.jpg",
+      "public_id": "Toothless"
     },
     {
         "name":"Beverly",
@@ -50,34 +30,14 @@
         "public_id": "Beverly"
     },
     {
-        "name":"Lucy-Loo",
-        "sex":"Female",
-        "age":"8 years old",
-        "species":"Dog",
-        "breed":"Mixed Breed, Large",
-        "description": "Lucy-Loo is a sweet, lovable gal who is looking for her forever home. She enjoys long walks, playing with lots of toys, and amazing belly rubs. She is a bit older but has lots of energy and cannot wait for all the adventures we can go on. She enjoys the best company from all humans, including the little ones. She is not suited in a house with other animals.",
-        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-        "public_id": "Beverly"
-    },
-    {
         "name":"Cinco",
         "sex":"Female",
         "age":"3 years old",
         "species":"Cat",
         "breed":"Domestic Shorthair/Mix",
         "description":"Cinco is a 3 year old female that has taken Quattro under her wing here at the shelter. She is playful and snuggly and is doing a great job at showing her younger roommate that the world isn't such a scary place. She would do well in a home with another cat that she can look out for and lounge with throughout the day. Cinco has no restrictions to who or what she can live with and would be a great addition to any family.",
-        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-        "public_id": "Beverly"
-    },
-    {
-        "name":"Ruby",
-        "sex":"Female",
-        "age":"7 years old",
-        "species":"Dog",
-        "breed":"Mixed Breed, Large",
-        "description":"Ruby came to us from another rescue, and she's a happy, active, affectionate girl. Ruby loves to run in our play yards, go for walks and hang out with people. Ruby also gets along with other big dogs, but she needs a home without young children, cats and possibly small dogs.",
-        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-        "public_id": "Beverly"
+        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667271711/Cinco.jpg",
+        "public_id": "Cinco"
     },
     {
         "name":"Jack",
@@ -86,8 +46,8 @@
         "species":"Dog",
         "breed":"Mastiff/Mix",
         "description":"Jack is a 7 year old Mastiff mix with a big heart ready to give all his love. He is a lowkey, go-with-the-flow kind of dog who becomes everyone's best friend. He is a gentle, easy to plase guy who would love to go on long walks and then come up for some cuddles and couch time. He loves all the pets and cuddles you can give!",
-        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-        "public_id": "Beverly"
+        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667271810/Jack.jpg",
+        "public_id": "Jack"
     },
     {
         "name":"Xena",
@@ -96,8 +56,8 @@
         "species":"Cat",
         "breed":"Domestic Shorthair/Mix",
         "description":"Xena is a small cat that came to us as a scared stray. She has since come out of her shell and lives in our cat community room with all of her friends. Xena has a historic eye injury that occurred during her time as a stray. Our vets have checked it out and it does not cause her any discomfort, though it will be something she has for the rest of her life. Xena would do well in a home with another cat companion, however, she does enjoy taking to to herself as well. Her ideal home is one without young children as she does not liked to be grabbed or chased, and instead enjoys coming to her friends for affections in her own time.",
-        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667264226/Beverly.jpg",
-        "public_id": "Beverly"
+        "image": "https://res.cloudinary.com/ellisjlc/image/upload/v1667271857/Xena.jpg",
+        "public_id": "Xena"
     }
 
   ]
