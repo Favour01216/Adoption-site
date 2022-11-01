@@ -1,7 +1,7 @@
 #description-box {
   position: relative;
   background: #f13939;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Arial;
   font-size: 20px;
   line-height: 120px;
@@ -11,7 +11,7 @@
 }
 
 #description-box:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 1;
@@ -62,7 +62,7 @@ body::after {
 }
 
 #pets-page {
-  background-color:white;
+  background-color: white;
   border: 1px solid black;
   border-radius: 10px;
 }
@@ -70,16 +70,15 @@ body::after {
 #sex-dropdown {
   position: relative;
   display: inline-block;
-  width:80px;
+  width: 80px;
 }
 
 #species-dropdown {
   position: relative;
   display: inline-block;
-  width:60px;
+  width: 60px;
 }
 
 #description {
-  padding-top:100px;
+  padding-top: 100px;
 }
-
