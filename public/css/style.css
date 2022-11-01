@@ -17,6 +17,7 @@
 
 body {
   background-repeat: no-repeat;
+  background-image: url("../images/pets_background.png");
   background-attachment: fixed;
   background-position: center;
   background-size: contain;

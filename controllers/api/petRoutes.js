@@ -1,34 +1,35 @@
 const Pet = require('../../models/Pet');
-const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary').v2;
 const user = require('../../models/user');
 const router = require('express').Router();
-const withAuth = require('../../utils/auth');
+const uploader = require('../../utils/helpers');
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_KEY,
   api_secret: process.env.CLOUDINARY_SECRET,
-})
+  secure:true,
+});
 
-router.post('/', withAuth, async (req, res) => {
+console.log(cloudinary.config());
+
+router.post('/', async (req, res) => {
   try {
+    console.log(req.body);
+    let petForm = req.body;
+    const image = await uploader(req.body.image);
+    console.log("***********************************");
+    petForm.image = image.secure_url,
+    petForm.image_public_id = image.public_id
+    console.log(petForm);
+    console.log("***********************************");
+
     const newPet = await Pet.create({
       ...req.body,
       user_id: req.session.user_id,
-    })
-    res.status(200).json(newPet);
-  } catch (e) {
-    res.status(400).json(e);
-  }
-}, async (req,res) => {
-  try {
-    console.log(req.files.image.path)
-    const result = await cloudinary.uploader.upload(req.files.image.path); // Should get a file path to image locally
-    console.log(req)
-    res.status(200).json ({
-      url: result.secure_url, // https url from cloudinary
-      public_id: result.public_id,
     });
+    console.log(newPet)
+    res.status(200).json(newPet);
   } catch (e) {
     res.status(400).json(e);
   }
@@ -54,7 +55,7 @@ router.get('/', async (req,res) => {
   } catch (e) {
     res.status(500).json(e);
   }
-  
 })
+
 
 module.exports = router;

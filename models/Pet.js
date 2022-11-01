@@ -44,11 +44,11 @@ Pet.init(
       type: DataTypes.DATE,
       defaultValue: new Date(),
     },
-    image_url: {
+    image: {
       type: DataTypes.STRING,
       defaultValue: null
     },
-    image_public_id: {
+    public_id: {
       type: DataTypes.STRING,
       defaultValue: null
     },
