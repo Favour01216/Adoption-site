@@ -1,39 +1,37 @@
-# Adoption-site
+# Project 2: Adoption Site
 
-This is a pet adoption site which provides information about pets to users
+## Description 
 
-The site also allows for admins to access the database to upload new pets
-
-We wanted to provide a platform on which pet shelters may use to give users information on pets available for adoption
+The purpose of this project is to work as a development team to create a pet adoption site that provides information about pets to users. Additionally, the site also allows for users classified as admins to access the database directly from the website in order to add new pets to the selection. We wanted to provide a platform on which pet shelters may use to give users information on pets that are currently available for adoption. 
 
 ## Table of Contents
 
-- [User story](#User-story)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Credits](#credits)
 - [License](#license)
-- [Tests](#tests)
 
-# User story
+## Installation
 
-AS AN administrator
-I WANT to be able to add new pets to the database by inputting the required values, name, age, sex, species, and breed, as well as a photo of the pet
-SO THAT I can easily add new pets to be adopted
-AS A user
-I WANT to be able to view the pet’s information once I have logged into my account on the website
-SO THAT I can pick the perfect pet to adopt
+There is no installation required in order to access the website. The website is fully functional and accessible through the live website: https://petplace2141.herokuapp.com/.
 
-# Installation
+## Usage
 
-The user should clone the repository from GitHub. This application requires Node.js, Inquirer, console.table and mysql2. To start application run `npm i`then source the sql file then seed index.js then`npm start`. To view database from MySQL `run mysql -u root -p`.
+The website features a homepage listing all of the currently available animals and lists the names and corresponding images for the pets. The pet details on the homepage and the links to each specific pet's page are only available once the user is logged into their account. The login page is accessed through the login button on the top right of the webpage, where it displays options to either log in or sign up for a new account. The user can log out by clicking on the logout button on the top right of the wepage once logged in. Once signed up or logged in, the homepage will refresh and the corresponding details for each pet will display including its sex, age, species, breed, and a brief description regarding their personality. The name of the pet can be clicked in order to open a page that again displays their information, and an "Adopt Me" button is present for when the user wants to adopt the pet. For admin accounts, there is an option to add a new pet. The page is accessed through the button to the left of the login/logout button, where admins can input information about the new pet. 
 
-# Usage
+Homepage: 
+![image]('./public/images/web.png')
 
-(https://adoption-website.herokuapp.com/)
-![view of homepage]('./public/images/main.png')
-![view of ligin page](./public/images/login.png)
-![view of oetpage with descripions](./public/images/web.png)
+Pet's page:
+![image]('./public/images/pets-page.png)
 
-# License
+Login page:
+![image]('.public/images/login.png)
 
-This web application is licensed with MIT
+## Credits 
+
+Creators: Favour Adesiyan, Ellison Chen and Sagiri Ikenaga
+
+## License
+
+This project is covered under the license of MIT. For more information about this license, please see: https://opensource.org/licenses/MIT.
