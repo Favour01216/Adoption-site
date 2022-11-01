@@ -31,7 +31,6 @@ module.exports = async function upload(imagePath) {
   };
   try {
     const result = await cloudinary.uploader.upload(imagePath, options);
-    console.log(result);
     return result;
   } catch (error) {
     console.error(error)
