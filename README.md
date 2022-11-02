@@ -26,7 +26,7 @@ Pet's page:
 ![image](./public/images/pets-page.png)
 
 Login page:
-![image](.public/images/login.png)
+![image](./public/images/login.png)
 
 ## Credits 
 
