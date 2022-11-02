@@ -1,34 +1,32 @@
 const router = require("express").Router();
 const { Pet, User } = require("../modelsxx");
-const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res) => { // Get all pets
   try {
-    const petData = await Pet.findAll();
-    const pets = petData.map((pet) => pet.get({ plain: true }));
-    pets.map((pet) => (pet.logged_in = req.session.logged_in));
-    res.render("homepage", {
+    const petData = await Pet.findAll(); // retrieve all pets from db
+    const pets = petData.map((pet) => pet.get({ plain: true })); // serialize pets
+    pets.map((pet) => (pet.logged_in = req.session.logged_in)); // add session logged_in to pet object to access in handlebar
+    res.render("homepage", { // render homepage
       pets,
-      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/pets/:id", async (req, res) => {
+router.get("/pets/:id", async (req, res) => { // Get specific pet using id
   try {
-    const petData = await Pet.findByPk(req.params.id);
+    const petData = await Pet.findByPk(req.params.id); // Find pet
 
-    const pet = petData.get({ plain: true });
-    let isCat;
-    if (pet.species == "Cat") {
+    const pet = petData.get({ plain: true }); // serialize
+    let isCat; // Set var to check if species is cat
+    if (pet.species == "Cat") { // set isCat, used for handlebar icon styling
       isCat = true;
     } else {
       isCat = false;
     }
     pet.isCat = isCat;
-    res.render("pet", {
+    res.render("pet", { // Render page
       ...pet,
       logged_in: req.session.logged_in,
     });
@@ -37,9 +35,9 @@ router.get("/pets/:id", async (req, res) => {
   }
 });
 
-router.get("/add", async (req, res) => {
+router.get("/add", async (req, res) => { // Add new pet page
   try {
-    res.render("admin", {
+    res.render("admin", { // render admin page, with form for adding new pet
       logged_in: req.session.logged_in,
       admin: req.session.admin,
     });
@@ -48,8 +46,8 @@ router.get("/add", async (req, res) => {
   }
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.logged_in) {
+router.get("/login", (req, res) => { // render login page
+  if (req.session.logged_in) { // if session is logged in, redirect to homepage
     res.redirect("/");
     return;
   }
